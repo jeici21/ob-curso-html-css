@@ -1,0 +1,9 @@
+$text-color: #3f3f3f; //variables fáciles
+
+@mixin formato-texto($bg-color: #f1f1f1) {
+    //mixins, colecciones de estilos, aceptan parámetros que pueden o no tener valor por defecto
+    width: 50rem;
+    color: $text-color;
+    text-transform: uppercase;
+    background-color: $bg-color;
+}

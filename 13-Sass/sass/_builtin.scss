@@ -1,0 +1,74 @@
+@use "sass:string";
+@use "sass:math";
+@use "sass:list";
+@use "sass:selector";
+@use "sass:color";
+
+//funciones con cadenas de texto
+@debug "Hola"; //presentando en consola
+//mostrando el índice de caracteres desde el substring especificado
+@debug str-index("Helvetica Neue", "Neue");
+$string: "Helvetica";
+//insertando el texto nuevo en el índice especificado
+$newString: str-insert($string, " Bold", 10);
+@debug $newString;
+@debug str-length($newString); //mostrando el número de caracteres
+//mostrando solo los caracteres entre los índices especificados
+@debug str-slice($newString, 5, 9);
+@debug to-upper-case("Roboto Mono"); //mayúsculas
+@debug to-lower-case("Roboto Mono"); //minúsculas
+@debug string.unique-id(); //creando id único
+
+//funciones con números
+@debug math.$e; //constante e
+@debug math.$pi; //constante pi
+@debug floor(4.6); //redondeo hacia abajo
+@debug ceil(4.6); //redondeo hacia arriba
+@debug round(4.4); //redondeo normal
+@debug math.clamp(0, 256.36, 10); //obliga al número ingresado a estar entre el rango especificado
+@debug max(3, 4, 6, 10, 2, 399); //retorna el más alto de los números
+@debug min(3, 4, 6, 10, 2, 399); //retorna el más bajo de los números
+@debug abs(-8); //valor absoluto
+@debug math.pow(2, 12); //potenciación
+@debug math.pow(2, abs(-23));
+@debug math.cos(math.$pi); //seno
+@debug math.sin(math.$pi); //coseno
+@debug math.tan(math.$pi); //tangente y demás funciones trigonométricas
+
+//funciones con listas
+$lista1: 10px, 10px, 0px, 15px;
+@debug $lista1;
+// crea una copia de la lista con el nuevo valor y separada con la regla especificada, espacio en este caso
+@debug append($lista1, 25px, space);
+$border-custom: solid 1px #ccc;
+@debug index($border-custom, 1px); //mostrando el índice del elemento especificado
+$border-2: [solid, 1px, #ccc];
+@debug list.is-bracketed($border-2); //devuelve true o false si la variable es un array o no
+@debug join($lista1, $border-custom, auto); //une dos listas
+@debug length(join($lista1, $border-custom, auto)); //muestra el número de elementos de la lista
+@debug list-separator($border-custom); //muestra el separador de la lista, espacio en este caso
+@debug list-separator(join($lista1, $border-custom, auto));
+//crea una copia de la lista reemplazando el valor especificado en el índice especificado
+@debug set-nth($border-custom, 2, 2px);
+
+//funciones de selector
+$selector-1: "a";
+$selector-2: ".disabled";
+@debug append($selector-1, $selector-2); //uniendo dos selectores en uno
+
+//funciones de color
+$color: rgb(249, 44, 222);
+@debug color.adjust($color, $red: -50, $alpha: -0.5); //ajustando el color de acuerdo a nuestras especificaciones
+$color-2: rgb(199, 44, 222, 0.5);
+@debug color.complement($color); //muestra el color complementario del color especificado
+$color-comp: #2cf947;
+@debug darken($color, 20%); //oscurece el color especificado
+$color-dark: #ba05a2;
+@debug lighten($color, 20%); //ilumina el color especificado
+$color-light: #fc8fee;
+@debug color.red($color); //muestra cuánto verde tiene el color especificado
+@debug color.green($color); //lo de arriba pero con el rojo
+@debug color.blue($color); // lo de arriba pero con el azul
+@debug color.hue($color); //lo de arriba pero en grados
+@debug color.invert($color); //muestra el color inverso del especificado
+$color-inv: #06d321;

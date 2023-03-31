@@ -1,0 +1,52 @@
+.contenedor {
+    width: 300px;
+    height: 100px;
+    background-color: aquamarine;
+}
+
+div {
+    background-color: blue;
+}
+
+span.frase {
+    font-style: italic;
+}
+
+span.frase::before {
+    /*Antes de cargar el elemento*/
+    content: '<< ';
+    font-size: xx-small;
+}
+
+span.frase::after {
+    /*Después de cargar el elemento*/
+    content: ' >>';
+    font-size: x-small;
+}
+
+.libro {
+    background-color: bisque;
+    padding: 15px;
+    font-family: Arial;
+}
+
+.libro p::first-letter {
+    /*Solo a la primera letra*/
+    font-size: xx-large;
+}
+
+.libro p::first-line {
+    /*Solo a la primera línea*/
+    color: white;
+}
+
+.libro p::selection {
+    /*Solo al texto seleccionado*/
+    background-color: chocolate;
+    color: lime;
+}
+
+.listado li::marker {
+    /*Solo a la numeración y a las viñetas*/
+    color: red;
+}

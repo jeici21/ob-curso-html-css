@@ -1,0 +1,46 @@
+.padre {
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+}
+
+.hijo {
+    width: 50%;
+    height: 50%;
+    background-color: beige;
+    /* transition: transform 1s ease-in 2s; */
+    animation: traslacion 4s ease-in-out infinite forwards alternate;
+}
+
+.padre:hover .hijo {
+    /* transform: translateX(100%);
+    background-color: blueviolet; */
+    /*moviendo de lugar al hijo y regresando al punto de partida*/
+    animation-play-state: paused;
+}
+
+@keyframes traslacion {
+
+    /*palabra clave para poder llamar este conjunto de animaciones cuando se requiera*/
+    0% {
+        background-color: beige;
+        transform: translateX(0%) translateY(0%);
+    }
+
+    25% {
+        transform: translateX(100%) translateY(0%);
+    }
+
+    50% {
+        transform: translateX(100%) translateY(100%);
+    }
+
+    75% {
+        transform: translateX(0%) translateY(100%);
+    }
+
+    100% {
+        background-color: darkorange;
+        transform: translateX(0%) translateY(0%);
+    }
+}

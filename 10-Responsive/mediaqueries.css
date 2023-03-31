@@ -1,0 +1,53 @@
+h1 {
+    color: red;
+    font-size: 4rem;
+}
+
+p {
+    color: black;
+    font-size: 2rem;
+}
+
+/*Solo en pantallas no mayores a 576px*/
+/* @media all and (max-width: 576px) { */
+/* @media (max-width:576px) {
+
+    h1 {
+        color: blue;
+    }
+} */
+
+@media (min-width:576px) {
+
+    /*Solo en pantallas no menores a 576px de ancho*/
+    h1 {
+        color: green;
+    }
+}
+
+@media (min-width:995px) {
+
+    /*Solo en pantallas no menores a 995px de ancho*/
+    h1 {
+        color: blue;
+    }
+}
+
+@media (orientation:landscape) and (min-height:400px) {
+
+    /*Solo cuando la altura de la pantalla es menor que la anchura
+    y la altura es de mínimo 400px*/
+    p {
+        color: brown;
+    }
+}
+
+@media (min-height:300px),
+(min-width:1100px) {
+
+    /*Solo en pantallas no menores a 995px de alto,
+    y también en pantallas no menores a 1100px de ancho*/
+    h1 {
+        color: darksalmon;
+    }
+}

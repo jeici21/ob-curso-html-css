@@ -1,0 +1,54 @@
+/*Estilos para colores*/
+.colores {
+    color: orangered;
+}
+
+.color-hexadecimal {
+    color: #8ce784;
+}
+
+.color-rgb {
+    color: rgb(47, 0, 200);
+    /*rojo, verde y azul*/
+}
+
+.color-rgba {
+    color: rgba(10, 10, 10, 0.85);
+    /*rojo, verde, azul y transparencia*/
+}
+
+/*Fondos*/
+.fondo {
+    background-image: url(https://th.bing.com/th/id/R.66de378504dff4550a7c6a9e1d02da40?rik=YNz7RnKDz8tKVQ&pid=ImgRaw&r=0);
+    background-position: left bottom;
+    /*La imagen se renderizará desde abajo a la derecha*/
+}
+
+.fondo-interno {
+    background-image: url(imagenes/fondo.webp);
+    background-position: left bottom;
+}
+
+/*Tamaños*/
+.ancho {
+    background-color: #8ce784;
+    width: 100px;
+}
+
+.alto {
+    background-color: aquamarine;
+    height: 500px;
+}
+
+.tarjeta {
+    border-style: solid;
+    border-color: rgb(150, 150, 150);
+    border-width: 1px;
+    /* border-top: none; */
+    padding: 10px 20px;
+    /*Espacio interno
+    padding: 10px 20px 30px 40px; */
+    margin: 10px 20px;
+    /*Espacio externo
+    margin: 10px 20px 30px 40px; */
+}

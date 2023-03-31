@@ -1,0 +1,17 @@
+//estilos con subguión al inicio no serán ejecutados
+.btn {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    color: #2b2b2b;
+
+    &:hover {
+        background-color: cyan;
+        color: red;
+    }
+}
+
+.btn-2 {
+    @extend .btn; //recibiendo los estilos de .btn
+    margin: 0.5rem;
+    border-radius: 0.25rem;
+}

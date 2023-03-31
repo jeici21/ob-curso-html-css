@@ -1,0 +1,18 @@
+/*id, class y etiqueta; esa es la prioridad para aplicar estilos
+\ para separar id*/
+h1#h1-id.h1-class {
+    color: darksalmon;
+}
+
+.h1-class {
+    color: yellow;
+}
+
+h1 {
+    color: blue !important;
+    /*Este estilo siempre tendrá prioridad, EVITAR usar el !important siempre que sea posible*/
+}
+
+p {
+    color: red;
+}

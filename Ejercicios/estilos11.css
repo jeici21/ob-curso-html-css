@@ -1,0 +1,29 @@
+div {
+    display: flex;
+}
+
+.contenedor {
+    flex-direction: row;
+}
+
+.barra-lateral {
+    flex-direction: column;
+    background-color: aquamarine;
+}
+
+.seccion-principal {
+    flex-grow: 1;
+    background-color: hotpink;
+}
+
+@media(max-width:639px) {
+    .contenedor {
+        flex-direction: column-reverse;
+    }
+
+    .barra-lateral {
+        flex-direction: row;
+        bottom: 0;
+        position: fixed;
+    }
+}
